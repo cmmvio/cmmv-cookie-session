@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@cmmv/middleware':
-        specifier: ^0.4.3
-        version: 0.4.3
+        specifier: ^0.4.4
+        version: 0.4.4
       cookie-session:
         specifier: ^2.1.0
         version: 2.1.0
@@ -102,8 +102,8 @@ packages:
   '@cmmv/body-parser@0.4.2':
     resolution: {integrity: sha512-TlTRS8vZH73HN3UuBzLwD3uFPJfwuA06w3vRUKxB6m3m98zPnLOww8Xxxsf/tLlPKNRCTCJCn2Ab8VqMIhls/g==}
 
-  '@cmmv/middleware@0.4.3':
-    resolution: {integrity: sha512-naRP8mb11ZSIzUy7uT2X2G1ltI/A60X6RMzAAxMYzgA0sfAuCLhF/eRjoNvrF8PRzAYXBBEFv+4INOX3ZG2SwQ==}
+  '@cmmv/middleware@0.4.4':
+    resolution: {integrity: sha512-zOHwQiPPEYH+rwCNEw6b16W22JrEc7wHP2aylN1MPW4vKeF5AzEjl+Wa4jR39iAufuMOFnA8tO29OgDzyJ/7OQ==}
     engines: {node: '>= 18.18.0 || >= 20.0.0'}
 
   '@cmmv/server-static@0.4.2':
@@ -2622,6 +2622,10 @@ packages:
   url-join@4.0.1:
     resolution: {integrity: sha512-jk1+QP6ZJqyOiuEI9AEWQfju/nB2Pw466kbA0LEZljHwKeMgd9WrAEgEGxjPDD2+TNbbb37rTyhEfrCXfuKXnA==}
 
+  utils-merge@1.0.1:
+    resolution: {integrity: sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==}
+    engines: {node: '>= 0.4.0'}
+
   uuid@10.0.0:
     resolution: {integrity: sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==}
     hasBin: true
@@ -2789,7 +2793,9 @@ snapshots:
       type-is: 1.6.18
       unpipe: 1.0.0
 
-  '@cmmv/middleware@0.4.3': {}
+  '@cmmv/middleware@0.4.4':
+    dependencies:
+      utils-merge: 1.0.1
 
   '@cmmv/server-static@0.4.2':
     dependencies:
@@ -5360,6 +5366,8 @@ snapshots:
       punycode: 2.3.1
 
   url-join@4.0.1: {}
+
+  utils-merge@1.0.1: {}
 
   uuid@10.0.0: {}
 
