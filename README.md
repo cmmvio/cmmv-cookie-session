@@ -15,14 +15,16 @@
 
 ## Description
 
-The ``@cmmv/middleware`` module is designed to integrate Express middlewares into CMMV applications. It is based on the original implementation of Express and the features offered by the [senchalabs/connect](https://github.com/senchalabs/connect) project. This module allows for flexible and modular addition of middlewares, providing a similar experience to Express. It supports a wide range of common middlewares, including authentication, session handling, request body parsing, and more, making it easy to create routes and handle HTTP requests efficiently and in an organized manner. Furthermore, the module maintains compatibility with custom middlewares, enabling developers to extend and adapt its functionality according to their application's specific needs.
+The ``@cmmv/cookie-session`` module is the CMMV implementation of the popular [cookie-session](https://www.npmjs.com/package/cookie-session) middleware, designed specifically for integration within CMMV applications. It offers an optimized and seamless way to manage sessions using cookies, providing compatibility and performance improvements tailored for CMMV's architecture. This module supports session handling with secure cookie storage, configurable expiration times, and various options to customize session behavior, making it easy to create and manage user sessions in a scalable and organized manner.
+
+By using ``@cmmv/cookie-session``, developers can leverage CMMV's native support for middleware integration while benefiting from performance adjustments and enhancements made specifically for the framework.
 
 ## Installation
 
-Install the ``@cmmv/middleware`` package via npm:
+Install the ``@cmmv/cookie-session`` package via npm:
 
 ```bash
-$ pnpm add @cmmv/middleware
+$ pnpm add @cmmv/cookie-session
 ```
 
 ## Quick Start
@@ -30,21 +32,17 @@ $ pnpm add @cmmv/middleware
 Below is a simple example of how to create a new CMMV application:
 
 ```typescript
-import cmmv from '@cmmv/server';
-import * as cors from 'cors';
-import * as compression from 'compression';
-import helmet from 'helmet';
-import _ from "./index";
+import cmmv from "@cmmv/server";
+import cookieSession from "@cmmv/cookie-session";
 
 const app = cmmv();
 
-app.use(_(cors()));
-app.use(_(helmet()));
-app.use(_(compression({ level: 6, threshold: 0 })));
+app.use(cookieSession( { name: "session", secret: "123" }));
 
 app.get("/", (req, res) => {
+    console.log(req.session)
     res.json({Hello: "World"});
-});
+})
 
 app.listen({ host: "127.0.0.1", port: 3000})
 .then(server => {
@@ -54,7 +52,7 @@ app.listen({ host: "127.0.0.1", port: 3000})
 })
 .catch(err => {
     throw Error(err.message);
-});;
+});
 ```
 
 ## Documentation

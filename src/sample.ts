@@ -1,5 +1,4 @@
 import cmmv from "@cmmv/server";
-import _ from "@cmmv/middleware";
 import cookieSession from "./index";
 
 const app = cmmv();
