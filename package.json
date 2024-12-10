@@ -2,7 +2,7 @@
 	"name": "@cmmv/cookie-session",
 	"version": "0.4.3",
 	"main": "dist/index.js",
-	"description": "CMMV (@cookie-session)",
+	"description": "CMMV cookie session module",
 	"scripts": {
 		"build": "tsc",
 		"dev": "NODE_ENV=dev nodemon",
@@ -36,9 +36,6 @@
 	},
 	"lint-staged": {
 		"**/*.ts": [
-			"prettier --ignore-path ./.prettierignore --write"
-		],
-		"packages/**/*.json": [
 			"prettier --ignore-path ./.prettierignore --write"
 		]
 	},
