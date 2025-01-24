@@ -22,12 +22,12 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/andrehrferreira/cmmv-cookie-session.git"
+        "url": "git+https://github.com/cmmvio/cmmv-cookie-session.git"
     },
     "author": "Andre Ferreira",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/andrehrferreira/cmmv-cookie-session/issues"
+        "url": "https://github.com/cmmvio/cmmv-cookie-session/issues"
     },
     "homepage": "https://cmmv.io",
     "publishConfig": {
