@@ -1,3 +1,7 @@
+## [0.4.7](https://github.com/cmmvio/cmmv-cookie-session/compare/v0.4.6...v0.4.7) (2025-01-24)
+
+
+
 ## 0.4.6 (2024-12-10)
 
 
