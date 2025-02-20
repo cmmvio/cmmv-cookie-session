@@ -1,3 +1,12 @@
+# [0.5.0](https://github.com/cmmvio/cmmv-cookie-session/compare/v0.4.7...v0.5.0) (2025-02-20)
+
+
+### Bug Fixes
+
+* require ([66f23ba](https://github.com/cmmvio/cmmv-cookie-session/commit/66f23bab70a378c0d799538e6bb28a1384638962))
+
+
+
 ## [0.4.7](https://github.com/cmmvio/cmmv-cookie-session/compare/v0.4.6...v0.4.7) (2025-01-24)
 
 
